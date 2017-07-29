@@ -1,0 +1,32 @@
+{
+  "name": "snes-scraper",
+  "version": "1.0.0",
+  "description": "A simple SNES scraper that works on BestBuy, Walmart, and Amazon",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sigurdvh/snes-scraper.git"
+  },
+  "keywords": [
+    "snes",
+    "scraper",
+    "node",
+    "amazon",
+    "best-buy",
+    "walmart"
+  ],
+  "author": "Cesar Zapata",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sigurdvh/snes-scraper/issues"
+  },
+  "homepage": "https://github.com/sigurdvh/snes-scraper#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "lodash": "^4.17.4",
+    "request": "^2.81.0"
+  }
+}
