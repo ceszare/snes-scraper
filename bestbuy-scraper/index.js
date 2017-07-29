@@ -1,7 +1,7 @@
-module.exports = function (context, myTimer) {
+module.exports = function (context, bestbuyScraper) {
     var timeStamp = new Date().toISOString();
     
-    if(myTimer.isPastDue)
+    if(bestbuyScraper.isPastDue)
     {
         context.log('JavaScript is running late!');
     }
