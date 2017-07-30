@@ -5,7 +5,7 @@ module.exports = function (context, bestbuyScraper) {
     {
         context.log('JavaScript is running late!');
     }
-    context.log('JavaScript timer trigger function ran!', timeStamp);   
+    context.log(`This is the uri to ping: ${process.env.bestBuyUri}`, timeStamp);   
     
     context.done();
 };
