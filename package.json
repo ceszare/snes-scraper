@@ -2,7 +2,7 @@
   "name": "snes-scraper",
   "version": "1.0.0",
   "description": "A simple SNES scraper that works on BestBuy, Walmart, and Amazon",
-  "main": "server.js",
+  "main": "bestbuy-scraper/index.js",
   "scripts": {
     "test": "mocha"
   },
