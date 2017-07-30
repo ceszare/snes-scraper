@@ -73,18 +73,21 @@ module.exports = function (context, bestbuyScraper) {
             let addToCartButtonState = $('#pdp-add-to-cart-button .cart-button').first().attr('data-button-state-id');
             switch(addToCartButtonState) {
             case 'ADD_TO_CART':
-                context.log('The product status has changed and can now be bought.');
+            case 'PRE_ORDER':
+                context.log('The product status has changed to ' + addToCartButtonState + ' and can now be bought.');
                 request({
                     url: MAKER_URI,
                     method: 'POST',
                     json: true,
                     body: {
-                        'value1': 'Best buy'
+                        'value1': 'Best buy',
+                        'value2': addToCartButtonState,
+                        'value3': BESTBUY_URI
                     }
                 });
                 break;
             case 'COMING_SOON':
-                context.log('No changes registered in the service yet.');
+                context.log('The item hasn\'t been set for pre-order yet..');
                 break;
             default:
                 context.log.warn('An unexpected state was detected in the button', addToCartButtonState);
