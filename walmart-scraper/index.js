@@ -58,5 +58,6 @@ module.exports = function (context, walmartScraper) {
         } else {
             context.log.error(error);
         }
+        context.done();
     }
 };
