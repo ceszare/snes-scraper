@@ -3,7 +3,6 @@
 */
 const request = require('request');
 const cheerio = require('cheerio');
-const _ = require('lodash');
 
 /*
   Loads environment variable constants
