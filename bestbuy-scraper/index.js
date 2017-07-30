@@ -34,8 +34,6 @@ module.exports = function (context, bestbuyScraper) {
             timeout: 10000
         }, handleBestBuyScrapeCookies);
 
-    context.done();
-
     /**
      * Performs a lookup for the `set-cookie` header required by Best Buy in order to perform a
      * search on a given product. When found, it will proceed to perform a query on the URI after
@@ -57,6 +55,7 @@ module.exports = function (context, bestbuyScraper) {
             }, handleBestBuyScrapeProduct);
         } else {
             context.log.error(error);
+            context.done();
         }
     }
 
@@ -91,8 +90,10 @@ module.exports = function (context, bestbuyScraper) {
                 context.log.warn('An unexpected state was detected in the button', addToCartButtonState);
                 break;
             }
+            context.done();
         } else {
             context.log.error(error);
+            context.done();
         }
     }
 
